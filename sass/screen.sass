@@ -1,0 +1,221 @@
+@import compass/reset
+@import compass/css3
+@import mixin
+
+
+body
+	background-color: #efefef
+	+bg(bg-ff13,jpg)
+	background-size: 100% auto
+	background-position: top center
+	background-repeat: no-repeat
+	font-family: 'Open Sans','Meiryo', helvetica
+	color: #000
+	@media screen and (max-width: 414px)
+		background-size: 200% auto
+
+.header
+	width: 100%
+	position: fixed
+	left: 0
+	z-index: 10
+	padding: 5px 0
+	background-color: rgba(255,255,255,0.8)
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3)
+	.app-icon,
+	h2
+		display: inline-block
+		vertical-align: middle
+	.app-icon
+		width: 40px
+		height: 40px
+		background-size: 100%
+		margin-left: 5px
+		border: 1px rgba(180,180,180,0.6) solid
+		box-sizing: border-box
+		+bg(app-icon,png)
+		+border-radius(1px)
+	h2
+		font-size: 1em
+		line-height: 40px
+		@media screen and (max-width: 414px)
+			font-size: 0.7em
+		@media screen and (max-width: 320px)
+			line-height: 20px
+			width: 150px
+	.share
+		float: right
+		padding-right: 10px
+		line-height: 40px
+		font-size: 1.5em
+		i
+			display: inline-block
+			margin: 0 3px
+			&.fa-twitter
+				color: #30A3DC
+			&.fa-facebook-official
+				color: #3B5995
+
+.container
+	position: relative
+	width: 100%
+	max-width: 1080px
+	margin: auto
+	padding-top: 50px
+	text-align: right
+	overflow: hidden
+	.text
+		position: absolute
+		color: #000	
+		text-align: left
+		top: 7em
+		left: 2em
+		padding: 10px
+		@media screen and (max-width: 414px)
+			left: 0
+			top: 0
+			width: 100%
+			padding: 0
+			background-color: rgba(255,108,58,0.9)
+		h1	
+			font-size: 2.2em
+			line-height: 1.5em
+			margin-bottom: 3.5em
+			padding: 15px
+			color: #fff
+			background-color: rgba(255,108,58,0.9)
+			@media screen and (max-width: 768px)
+				font-size: 1.5em
+			@media screen and (max-width: 414px)
+				padding-top: 65px
+				font-size: 1.6em
+				margin-bottom: 0
+				background-color: rgba(255,108,58,0)
+			@media screen and (max-width: 375px)
+				font-size: 1.45em
+			@media screen and (max-width: 320px)
+				font-size: 1.25em
+			
+		.price
+			margin-top: 1em
+			padding: 15px
+			@media screen and (max-width: 414px)
+				margin-top: 0
+			h2
+				font-size: 2.4em
+				line-height: 1.5em	
+				color: #FF4B53
+				font-weight: bold
+				small
+					font-size: 0.5em
+					font-weight: normal
+				@media screen and (max-width: 414px)
+					color: #fff
+				@media screen and (max-width: 320px)
+					font-size: 2em
+			.period
+				font-size: 1em
+				color: #FF4B53
+				small
+					font-size: 0.5em
+				@media screen and (max-width: 414px)
+					color: #fff
+					small
+						font-size: 0.8em
+			.org
+				font-size: 0.6em
+				color: #444
+				@media screen and (max-width: 414px)
+					color: #fff
+					font-size: 0.8em
+		.store
+			margin-top: 2em
+			a
+				width: 150px
+				height: 50px
+				display: inline-block
+				background-size: 100%
+				+border-radius(4px)
+				&.apple
+					+bg(icon_appstore,jpg)
+				&.android
+					+bg(icon_googleplay,jpg)
+			@media screen and (max-width: 375px)
+				width: 100%
+				text-align: center
+				a
+					width: 160px
+					height: 54px
+					@media screen and (max-width: 320px)
+						width: 140px
+						height: 47px
+
+		
+	img
+		&.main
+			width: 70%
+			max-width: 800px
+			@media screen and (max-width: 414px)
+				width: 140%
+				margin-top: 300px
+				margin-left: -20%
+.about
+	width: 100%
+	background-color: #fff
+	color: #444
+	margin-top: -100px
+	.des
+		width: 90%
+		max-width: 960px
+		text-align: left
+		position: relative
+		z-index: 1
+		margin: auto
+		padding-top: 50px
+		font-size: 1em
+		line-height: 1.5em
+		@media screen and (max-width: 768px)
+			font-size: 0.8em
+		h2
+			font-size: 2em
+			line-height: 1.8em
+			color: #000
+			padding: 1em 0 0.3em 0
+			&:first-of-type
+				padding-top: 0.5em
+			@media screen and (max-width: 414px)
+				padding: 0.3em 0
+		hr
+			clear: both
+			opacity: 0
+			height: 50px
+		img
+			width: 500px
+			margin-top: 2em
+			&.img-left
+				float: left
+				margin-right: 30px
+			&.img-right
+				float: right
+				margin-left: 30px
+			@media screen and (max-width: 768px)
+				width: 300px
+				&:first-of-type
+					margin-top: 50px
+					margin-bottom: 50px 
+			@media screen and (max-width: 414px)
+				width: 100%
+				&.img-left,
+				&.img-right
+					float: none
+					margin: 0
+
+		.more
+			font-size: 1em
+			color: #00AFFF
+			text-decoration: none
+.footer
+	text-align: center
+	font-size: 0.6em
+	line-height: 3em
+	color: #888

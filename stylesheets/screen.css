@@ -1,0 +1,374 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  background-color: #efefef;
+  background-image: url("../img/bg-ff13.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  font-family: "Open Sans", "Meiryo", helvetica;
+  color: #000;
+}
+@media screen and (max-width: 414px) {
+  body {
+    background-size: 200% auto;
+  }
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  padding: 5px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.header .app-icon,
+.header h2 {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .app-icon {
+  width: 40px;
+  height: 40px;
+  background-size: 100%;
+  margin-left: 5px;
+  border: 1px rgba(180, 180, 180, 0.6) solid;
+  box-sizing: border-box;
+  background-image: url("../img/app-icon.png");
+  background-repeat: no-repeat;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+}
+.header h2 {
+  font-size: 1em;
+  line-height: 40px;
+}
+@media screen and (max-width: 414px) {
+  .header h2 {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .header h2 {
+    line-height: 20px;
+    width: 150px;
+  }
+}
+.header .share {
+  float: right;
+  padding-right: 10px;
+  line-height: 40px;
+  font-size: 1.5em;
+}
+.header .share i {
+  display: inline-block;
+  margin: 0 3px;
+}
+.header .share i.fa-twitter {
+  color: #30A3DC;
+}
+.header .share i.fa-facebook-official {
+  color: #3B5995;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding-top: 50px;
+  text-align: right;
+  overflow: hidden;
+}
+.container .text {
+  position: absolute;
+  color: #000;
+  text-align: left;
+  top: 7em;
+  left: 2em;
+  padding: 10px;
+}
+@media screen and (max-width: 414px) {
+  .container .text {
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    background-color: rgba(255, 108, 58, 0.9);
+  }
+}
+.container .text h1 {
+  font-size: 2.2em;
+  line-height: 1.5em;
+  margin-bottom: 3.5em;
+  padding: 15px;
+  color: #fff;
+  background-color: rgba(255, 108, 58, 0.9);
+}
+@media screen and (max-width: 768px) {
+  .container .text h1 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 414px) {
+  .container .text h1 {
+    padding-top: 65px;
+    font-size: 1.6em;
+    margin-bottom: 0;
+    background-color: rgba(255, 108, 58, 0);
+  }
+}
+@media screen and (max-width: 375px) {
+  .container .text h1 {
+    font-size: 1.45em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container .text h1 {
+    font-size: 1.25em;
+  }
+}
+.container .text .price {
+  margin-top: 1em;
+  padding: 15px;
+}
+@media screen and (max-width: 414px) {
+  .container .text .price {
+    margin-top: 0;
+  }
+}
+.container .text .price h2 {
+  font-size: 2.4em;
+  line-height: 1.5em;
+  color: #FF4B53;
+  font-weight: bold;
+}
+.container .text .price h2 small {
+  font-size: 0.5em;
+  font-weight: normal;
+}
+@media screen and (max-width: 414px) {
+  .container .text .price h2 {
+    color: #fff;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container .text .price h2 {
+    font-size: 2em;
+  }
+}
+.container .text .price .period {
+  font-size: 1em;
+  color: #FF4B53;
+}
+.container .text .price .period small {
+  font-size: 0.5em;
+}
+@media screen and (max-width: 414px) {
+  .container .text .price .period {
+    color: #fff;
+  }
+  .container .text .price .period small {
+    font-size: 0.8em;
+  }
+}
+.container .text .price .org {
+  font-size: 0.6em;
+  color: #444;
+}
+@media screen and (max-width: 414px) {
+  .container .text .price .org {
+    color: #fff;
+    font-size: 0.8em;
+  }
+}
+.container .text .store {
+  margin-top: 2em;
+}
+.container .text .store a {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  background-size: 100%;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.container .text .store a.apple {
+  background-image: url("../img/icon_appstore.jpg");
+  background-repeat: no-repeat;
+}
+.container .text .store a.android {
+  background-image: url("../img/icon_googleplay.jpg");
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 375px) {
+  .container .text .store {
+    width: 100%;
+    text-align: center;
+  }
+  .container .text .store a {
+    width: 160px;
+    height: 54px;
+  }
+}
+@media screen and (max-width: 375px) and (max-width: 320px) {
+  .container .text .store a {
+    width: 140px;
+    height: 47px;
+  }
+}
+
+.container img.main {
+  width: 70%;
+  max-width: 800px;
+}
+@media screen and (max-width: 414px) {
+  .container img.main {
+    width: 140%;
+    margin-top: 300px;
+    margin-left: -20%;
+  }
+}
+
+.about {
+  width: 100%;
+  background-color: #fff;
+  color: #444;
+  margin-top: -100px;
+}
+.about .des {
+  width: 90%;
+  max-width: 960px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  margin: auto;
+  padding-top: 50px;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+@media screen and (max-width: 768px) {
+  .about .des {
+    font-size: 0.8em;
+  }
+}
+.about .des h2 {
+  font-size: 2em;
+  line-height: 1.8em;
+  color: #000;
+  padding: 1em 0 0.3em 0;
+}
+.about .des h2:first-of-type {
+  padding-top: 0.5em;
+}
+@media screen and (max-width: 414px) {
+  .about .des h2 {
+    padding: 0.3em 0;
+  }
+}
+.about .des hr {
+  clear: both;
+  opacity: 0;
+  height: 50px;
+}
+.about .des img {
+  width: 500px;
+  margin-top: 2em;
+}
+.about .des img.img-left {
+  float: left;
+  margin-right: 30px;
+}
+.about .des img.img-right {
+  float: right;
+  margin-left: 30px;
+}
+@media screen and (max-width: 768px) {
+  .about .des img {
+    width: 300px;
+  }
+  .about .des img:first-of-type {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .about .des img {
+    width: 100%;
+  }
+  .about .des img.img-left, .about .des img.img-right {
+    float: none;
+    margin: 0;
+  }
+}
+.about .des .more {
+  font-size: 1em;
+  color: #00AFFF;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.6em;
+  line-height: 3em;
+  color: #888;
+}

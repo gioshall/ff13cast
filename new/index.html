@@ -22,6 +22,8 @@
 </head>
 <body>
     <div class="header">
+        <img src="img/logo-ubitus-w.png" class="logo-u">
+        <img src="img/logo-ubitus.png" class="logo-u logo-color">
         <!-- <div class="app-icon"></div>
         <h2>ファイナルファンタジー®XIII Google Cast Edition</h2> -->
 
@@ -30,35 +32,43 @@
             <i class="fa fa-facebook-official"></i>
         </div>
     </div>
-    <div class="video-bg">
-        <!-- <video src="img/ff13-web.mp4" loop autoplay></video> -->
+    <div class="main-bg">
+        <div class="blur">
+            <div class="ball-p"></div>
+            <div class="ball-g"></div>
+            <div class="ball-b"></div>      
+        </div>
     </div>
 
-    <div class="blur">
-        <div class="ball-p"></div>
-        <div class="ball-g"></div>
-        <div class="ball-b"></div>
-        
+    <div class="title">
+        <h1>ファイナルファンタジー®XIII</h1> 
+    </div>
+
+    <div class="nav">
+        <h2>ファイナルファンタジー®XIII Google Cast Edition</h2>
+         <ul>
+            <li onClick="section1()">Setup</li>
+            <li onClick="section2()">Chromecast</li>
+            <li onClick="section3()">About</li>
+        </ul>
+        <div class="video-play">
+            <i class="fa fa-play"></i>
+        </div>  
     </div>
     
 	<div class="container">    
         <!-- <img src="img/cast-main.png" class="main"> -->
-        <div class="title">
-            <h1>ファイナルファンタジー®XIII</h1> 
-        </div>
-
         <!-- <div class="cast-hand"></div> -->
 
         <div class="info">
-            <h2>ファイナルファンタジー®XIII 
-            Google Cast Edition</h2>
             ©2009, 2010, 2014 SQUARE ENIX CO., LTD. All Rights Reserved. CHARACTER DESIGN: TETSUYA NOMURA
         </div>
+
+        <div class="scroll-down">
+            <i class="fa fa-angle-down"></i>
+        </div>
         
-        <div class="text">
-            <div class="video-play">
-                <i class="fa fa-play"></i>
-            </div>       
+        <div class="text">       
             <div class="price">
                 <div class="period">2016 / 03 / 15 <small>まで</small> 期間限定特価</div>
                 <h2>価格: 1,400 円<small>（税込）</small></h2>
@@ -71,8 +81,27 @@
         </div>           
     </div>
     <div class="about">
-        <div class="des">
-            <h2>3つの簡単なステップではじめよう</h2>
+        <div class="des block01">
+            <h2>Chromecastと一緒にゲームを楽しもう！</h2>
+            <h3>アプリ</h3>
+            <div class="app-download">
+                <div class="app-icon">
+                    <img src="img/app-icon.png" >
+                    <div class="d-icon">
+                        <i class="fa fa fa-arrow-down"></i>
+                    </div>
+                </div>
+                <h3>ストアからアプリをダウンロードして<br>ゲームをお楽しみください</h3>
+                
+            </div>
+            <ul class="dot">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+             <h3>Chromecast</h3>
             <div class="section-step">
                 <img class="section-stepImage" src="img/learn-three-steps-tv-01-plug-in.jpg">
                  <div class="section-stepContent">
@@ -103,7 +132,7 @@
             
             <hr>
 
-            <h2>Chromecast とは</h2>
+            <h2 class="block02">Chromecast とは</h2>
 
             <img src="img/chromecast.jpg" class="img-left">
             <p class="about-cast">
@@ -114,7 +143,7 @@
 
             <hr>
 
-            <h2>ファイナルファンタジーXIII</h2>
+            <h2 class="block03">ファイナルファンタジーXIII とは</h2>
             <img src="img/story.jpg" class="img-right">
             <p class="about-game">
                 世界的な大ヒットを記録し続けている人気RPG、ファイナルファンタジーシリーズの第13作目・第一弾。高密度・高水準のビジュアルとサウンド、大幅に進化したバトルシステムによって従来作以上の臨場感あふれるプレイが可能となっています。戦闘シーンには、高い戦略性とスピード感を生み出す新世代の"アクティブタイムバトル"や、戦況に応じてキャラクターの役割を瞬時に切り替えられる"オプティマシステム"などを導入。シリーズ伝統の召喚獣は、新たに召喚獣がさまざまなマシンに変身する"ドライビングモード"が追加され、ますます派手で爽快感のあるものに。
@@ -130,6 +159,11 @@
             <hr class="invis">
         </div>
     </div>
+
+    <div class="scroll-top" onClick="gotop()">
+        <i class="fa fa-angle-down"></i>
+    </div>
+    
     <div class="footer">
         <div class="logos">
             <img src="img/logo-ubitus.png" class="ubitus">

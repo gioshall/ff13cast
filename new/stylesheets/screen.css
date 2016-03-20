@@ -645,6 +645,7 @@ body .scroll-top.solid {
   color: #444;
   position: relative;
   z-index: 5;
+  padding-bottom: 50px;
 }
 .about .des {
   width: 90%;
@@ -815,7 +816,6 @@ body .scroll-top.solid {
 
 .footer {
   background-color: #dadada;
-  margin-top: 50px;
   text-align: center;
   font-size: 0.6em;
   padding: 10px 0;

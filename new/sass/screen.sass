@@ -96,27 +96,6 @@ body
 		box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1)
 		.logo-color
 			opacity: 1
-	// .app-icon,
-	// h2
-	// 	display: inline-block
-	// 	vertical-align: middle
-	// .app-icon
-	// 	width: 40px
-	// 	height: 40px
-	// 	background-size: 100%
-	// 	margin-left: 5px
-	// 	border: 1px rgba(180,180,180,0.6) solid
-	// 	box-sizing: border-box
-	// 	+bg(app-icon,png)
-	// 	+border-radius(1px)
-	// h2
-	// 	font-size: 1em
-	// 	line-height: 40px
-	// 	@media screen and (max-width: 414px)
-	// 		font-size: 0.7em
-	// 	@media screen and (max-width: 320px)
-	// 		line-height: 20px
-	// 		width: 150px
 	.share
 		float: right
 		padding-right: 10px
@@ -150,9 +129,15 @@ body
 	li
 		display: inline-block
 		margin-right: 35px
-		font-size: 2.8em
+		font-size: 2.1em
 		line-height: 2em
 		cursor: pointer
+		//font-weight: 600
+		//letter-spacing: -1px
+		&.en,
+		.en
+			letter-spacing: 0
+			font-size: 2.25rem
 		//+transition(0.2s)
 		&:hover
 			color: #87f3ce
@@ -200,17 +185,21 @@ body
 		position: fixed
 		top: 0
 		left: 200px
+		height: 60px
 		h2
 			display: none
 		li
 			line-height: 60px
 			text-align: center	
 			font-size: 1.2em
-			color: #797979
+			color: #888
 			padding: 0 15px
 			height: 60px
 			margin: 0
 			text-shadow: 0 0 0 rgba(0,0,0,.7)
+			&.en,
+			.en
+				font-size: 1.2rem
 			&:hover
 				border-bottom: 3px #0ebacb solid
 				box-sizing: border-box
@@ -244,7 +233,7 @@ body
 	&:after
 		position: absolute
 		width: 100%
-		height: 40%
+		height: 50%
 		bottom: 0
 		left: 0
 		+linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9))
@@ -365,7 +354,8 @@ body
 			h2
 				font-size: 2.8em
 				line-height: 1.2em	
-				color: #efc74c
+				//color: #efc74c
+				color: #fff
 				font-weight: bold
 				small
 					font-size: 0.5em
@@ -378,7 +368,8 @@ body
 					font-size: 2em
 			.period
 				font-size: 1em
-				color: #efc74c
+				//color: #efc74c
+				color: #fff
 				small
 					font-size: 0.5em
 				@media screen and (max-width: 414px)
@@ -509,10 +500,14 @@ body
 		.app-download
 			text-align: center
 			padding: 0px 0 100px
+			width: 65%
+			margin: auto
 			.app-icon
 				position: relative
-				display: inline-block
+				//display: inline-block
+				float: left
 				vertical-align: middle
+				margin-right: 20px
 				img
 					width: 100px
 					height: 100px
@@ -532,10 +527,10 @@ body
 					+border-radius(50%)
 					box-shadow: 0 1px 3px rgba(0,0,0,0.6)
 			h3
-				display: inline-block
+				//display: inline-block
 				vertical-align: middle
 				text-align: left
-				margin-left: 15px
+				//padding-left: 15px
 				font-size: 1.2em
 				line-height: 2em
 				font-weight: normal
@@ -573,7 +568,6 @@ body
 .footer
 	background-color: #dadada
 	text-align: center
-	font-size: 0.6em
 	//line-height: 3em
 	padding: 10px 0
 	color: #666
@@ -586,13 +580,13 @@ body
 		+transform(scale(0.8))
 	.logos
 		display: inline-block
-		margin: 15px
+		margin: 10px
 		vertical-align: middle
 		img
 			width: 120px
 			display: inline-block
 			vertical-align: middle
-			margin: 5px 10px
+			margin: 5px 8px
 			&.ubitus
 				width: 100px
 	.footer-links
@@ -601,7 +595,8 @@ body
 		text-align: left
 		li
 			display: inline-block
-			width: 33%
+			width: 32%
+			font-size: 0.9rem
 			line-height: 2.5em
 			margin: 0
 			cursor: pointer

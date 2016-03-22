@@ -49,3 +49,7 @@ $(document).ready(function(){
 $( window ).resize(function() {
 	mainBG();
 });
+
+
+// share
+

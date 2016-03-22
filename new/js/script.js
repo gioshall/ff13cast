@@ -45,6 +45,10 @@ function section2(){$('html,body').animate( { scrollTop: $('.block02').offset().
 function section3(){$('html,body').animate( { scrollTop: $('.block03').offset().top}, 400)};
 function gotop(){$('html,body').animate( { scrollTop: $('html,body').offset().top}, 100)};
 
+$('.mobile-menu').click(function(){
+	$('.header, .nav').toggleClass('mobile-open')
+})
+
 // scroll
 
 $(document).ready(function(){

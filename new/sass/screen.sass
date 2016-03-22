@@ -90,12 +90,31 @@ body
 		+transition(0.3s)
 		&.logo-color
 			opacity: 0
+	@media screen and (max-width: 414px)
+		background-color: #FFF
+		height: 50px
+		box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1)
+		.logo-u.logo-color
+			opacity: 1
+		.logo-img
+			overflow: hidden
+			width: 50px
+			height: 50px
+			display: inline-block
+			position: relative
+		.share
+			margin-right: 50px
+		&.mobile-open
+			height: 240px
+
 	&.solid
 		background-color: #FFF
 		//border-bottom: 1px #ccc solid
 		box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1)
 		.logo-color
 			opacity: 1
+	
+		
 	.share
 		float: right
 		padding-right: 10px
@@ -121,8 +140,10 @@ body
 	+transition(0.3s)
 	@media screen and (max-width: 768px)
 		left: 2em
-		bottom: 130px
-		padding: 20px
+		bottom: 150px
+		padding: 0 20px
+	.mobile-menu
+		display: none
 	ul
 		display: inline-block
 		vertical-align: middle
@@ -141,9 +162,51 @@ body
 		//+transition(0.2s)
 		&:hover
 			color: #87f3ce
+	
 		@media screen and (max-width: 1024px)
-			font-size: 2em
+			font-size: 1.6em
 			margin-right: 25px
+			&.en,
+			.en
+				font-size: 1.75rem
+	@media screen and (max-width: 414px)
+		position: fixed
+		top: 0
+		left: 0
+		width: 100%
+		padding: 0
+		height: 60px
+		overflow: hidden
+		+transition(0.3s)
+		&.mobile-open
+			height: 240px
+			
+		h2
+			display: none
+		.mobile-menu
+			display: block
+			width: 60px
+			font-size: 1.5rem
+			line-height: 60px
+			color: #777
+			position: absolute
+			right: 0
+			text-align: center
+			text-shadow: 0 0 0 rgba(0,0,0,.7)
+		ul
+			width: 100%
+			margin-top: 60px
+		li
+			margin-right: 0
+			font-size: 1.5rem
+			line-height: 60px
+			color: #777
+			padding: 0
+			height: 60px
+			margin: 0 auto
+			text-shadow: 0 0 0 rgba(0,0,0,.7)
+			width: 60%
+			display: block
 
 	.video-play
 		width: 122px
@@ -217,6 +280,26 @@ body
 				color: #fff
 			&:before
 				border: 50px #0ebacb solid
+		@media screen and (max-width: 768px)
+			left: 150px
+		@media screen and (max-width: 414px)
+			left: 0
+			&.mobile-open
+				height: 240px
+			ul
+				width: 100%
+				margin-top: 60px
+			li
+				margin-right: 0
+				font-size: 1.5rem
+				line-height: 60px
+				color: #777
+				padding: 0
+				height: 60px
+				margin: 0 auto
+				text-shadow: 0 0 0 rgba(0,0,0,.7)
+				width: 60%
+				display: block
 
 .main-bg
 	width: 100%
@@ -228,8 +311,10 @@ body
 	+bg(bg-ff13,jpg)
 	background-color: #000
 	background-size: 100% auto
-	background-position: top center
+	background-position: center top
 	background-repeat: no-repeat
+	@media screen and (max-width: 414px)
+		background-position: center 50px 
 	&:after
 		position: absolute
 		width: 100%
@@ -269,6 +354,8 @@ body
 		height: 550px
 		left: 0px
 		top: -260px
+	@media screen and (max-width: 768px)
+		display: none
 
 .title
 	max-width: 650px
@@ -282,7 +369,9 @@ body
 		width: 80%
 		left: 10%
 		top: initial
-		bottom: 550px
+		bottom: 500px
+	@media screen and (max-width: 414px)
+		bottom: 360px
 	h1,
 	&:before		
 		width: 100%
@@ -331,6 +420,10 @@ body
 		color: #888
 		font-weight: normal
 		+transform(scale(0.8))
+		@media screen and (max-width: 414px)
+			width: 160%
+			left: -30%
+			+transform(scale(0.6))
 
 	.text
 		position: absolute
@@ -345,6 +438,8 @@ body
 			right: initial
 			bottom: 50px
 			width: 85%
+		@media screen and (max-width: 414px)
+			padding-bottom: 80px
 
 		.price
 			margin-top: 1em
@@ -372,6 +467,8 @@ body
 				color: #fff
 				small
 					font-size: 0.5em
+				@media screen and (max-width: 768px)
+					font-size: 0.8em
 				@media screen and (max-width: 414px)
 					color: #fff
 					small
@@ -398,6 +495,8 @@ body
 				position: absolute
 				right: 0
 				bottom: 25px
+			@media screen and (max-width: 414px)
+				right: initial
 			@media screen and (max-width: 375px)
 				width: 100%
 				text-align: center
@@ -488,9 +587,6 @@ body
 				margin-left: 30px
 			@media screen and (max-width: 768px)
 				width: 300px
-				&:first-of-type
-					margin-top: 50px
-					margin-bottom: 50px 
 			@media screen and (max-width: 414px)
 				width: 100%
 				&.img-left,
@@ -541,6 +637,8 @@ body
 			padding-top: 2.5em
 			line-height: 1.9em
 			text-align: justify
+			@media screen and (max-width: 768px)
+				padding-top: 0
 
 		.more
 			font-size: 1em
@@ -558,7 +656,8 @@ body
 		text-align: center
 		font-size: 0.8em
 		.section-stepImage
-			width: 280px
+			width: 100%
+			max-width: 280px
 			+border-radius(50%)
 		h4
 			font-size: 1.3em
@@ -607,6 +706,9 @@ body
 					color: #444
 			&:hover
 				color: #444
+		@media screen and (max-width: 768px)
+			width: 90%
+			margin: auto
 
 			
 

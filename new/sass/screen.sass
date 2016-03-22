@@ -32,7 +32,7 @@ body
 	.scroll-top,
 	.scroll-down
 		position: relative
-		margin: -60px auto
+		margin: -75px auto
 		top: 100%
 		width: 40px
 		height: 40px
@@ -142,7 +142,7 @@ body
 	+transition(0.3s)
 	@media screen and (max-width: 768px)
 		left: 2em
-		bottom: 220px
+		bottom: 130px
 		padding: 20px
 	ul
 		display: inline-block
@@ -289,9 +289,11 @@ body
 	left: 20px 
 	//+transform(translateX(-50%))
 	@media screen and (max-width: 768px)
-		max-width: 70%
-		width: 70%
-		left: 15%
+		max-width: 80%
+		width: 80%
+		left: 10%
+		top: initial
+		bottom: 550px
 	h1,
 	&:before		
 		width: 100%
@@ -332,11 +334,14 @@ body
 	
 	.info
 		position: absolute
-		bottom: 10px
-		left: 3%
+		width: 100%
+		bottom: 0px
+		text-align: center
 		font-size: 0.5rem
+		line-height: 1rem
 		color: #888
 		font-weight: normal
+		+transform(scale(0.8))
 
 	.text
 		position: absolute
@@ -350,6 +355,7 @@ body
 			left: 2em
 			right: initial
 			bottom: 50px
+			width: 85%
 
 		.price
 			margin-top: 1em
@@ -392,11 +398,15 @@ body
 				height: 50px
 				display: inline-block
 				background-size: 100%
-				+border-radius(4px)
+				//+border-radius(4px)
 				&.apple
-					+bg(icon_appstore,jpg)
+					+bg(icon_appstore,png)
 				&.android
-					+bg(icon_googleplay,jpg)
+					+bg(icon_googleplay,png)
+			@media screen and (max-width: 768px)
+				position: absolute
+				right: 0
+				bottom: 25px
 			@media screen and (max-width: 375px)
 				width: 100%
 				text-align: center
@@ -571,6 +581,9 @@ body
 		display: block
 		margin-top: 30px
 		color: #999
+		font-size: 0.5rem
+		line-height: 1rem
+		+transform(scale(0.8))
 	.logos
 		display: inline-block
 		margin: 15px
@@ -591,6 +604,15 @@ body
 			width: 33%
 			line-height: 2.5em
 			margin: 0
+			cursor: pointer
+			a
+				text-decoration: none
+				color: #666
+				&:hover
+					color: #444
+			&:hover
+				color: #444
+
 			
 
 .tvcm

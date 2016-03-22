@@ -23,6 +23,20 @@ $('.tvcm').click(function(){
     $('.cm-box iframe').attr('src','');
 })
 
+// tos faq
+
+$('.footer-links .inner-link').click(function(){
+    $('body').addClass('blur-bg');
+    $('.tvcm').addClass('show');
+    var innerLink = $(this).attr('outlink');
+    $('.cm-box iframe').attr('src',innerLink);
+});
+$('.tvcm').click(function(){
+    $('body').removeClass('blur-bg');
+    $('.tvcm').removeClass('show');
+    $('.cm-box iframe').attr('src','');
+})
+
 
 // nav
 

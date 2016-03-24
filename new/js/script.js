@@ -10,6 +10,12 @@ function mainBG() {
 	}
 }
 
+function closeBox() {
+	$('body').removeClass('blur-bg');
+    $('.tvcm').removeClass('show');
+    $('.cm-box iframe').attr('src','');
+};
+
 // video
 
 $('.video-play').click(function(){
@@ -18,25 +24,29 @@ $('.video-play').click(function(){
     $('.cm-box iframe').attr('src','https://www.youtube.com/embed/wA5-hsRLgHk?autoplay=1&showinfo=0&rel=0&controls=0');
 });
 $('.tvcm').click(function(){
-    $('body').removeClass('blur-bg');
-    $('.tvcm').removeClass('show');
-    $('.cm-box iframe').attr('src','');
+    closeBox();
 })
 
 // tos faq
 
-$('.footer-links .inner-link').click(function(){
+$('.inner-link').click(function(){
     $('body').addClass('blur-bg');
     $('.tvcm').addClass('show');
     var innerLink = $(this).attr('outlink');
     $('.cm-box iframe').attr('src',innerLink);
 });
 $('.tvcm').click(function(){
-    $('body').removeClass('blur-bg');
-    $('.tvcm').removeClass('show');
-    $('.cm-box iframe').attr('src','');
+    closeBox();
 })
 
+// press ESC
+
+$(document).on( "keydown", function( event ) {
+  //console.log(event.which);
+  if(event.which == 27) {
+  	closeBox();
+  }
+});
 
 // nav
 
@@ -47,6 +57,10 @@ function gotop(){$('html,body').animate( { scrollTop: $('html,body').offset().to
 
 $('.mobile-menu').click(function(){
 	$('.header, .nav').toggleClass('mobile-open')
+})
+
+$('.nav li').click(function(){
+	$('.header, .nav').removeClass('mobile-open')
 })
 
 // scroll

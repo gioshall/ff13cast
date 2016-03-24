@@ -6,9 +6,6 @@ body
 	
 	font-family: 'Roboto','Meiryo', helvetica
 	color: #000
-	@media screen and (max-width: 414px)
-		background-size: 200% auto
-
 	&.blur-bg
 		.header,
 		.nav,
@@ -90,22 +87,24 @@ body
 		+transition(0.3s)
 		&.logo-color
 			opacity: 0
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 768px)
 		background-color: #FFF
 		height: 50px
 		box-shadow: 0 10px 10px 0 rgba(0,0,0,0.1)
 		.logo-u.logo-color
 			opacity: 1
+		.share
+			margin-right: 50px
+		&.mobile-open
+			height: 420px
+	@media screen and (max-width: 414px)	
 		.logo-img
 			overflow: hidden
 			width: 50px
 			height: 50px
 			display: inline-block
 			position: relative
-		.share
-			margin-right: 50px
-		&.mobile-open
-			height: 240px
+
 
 	&.solid
 		background-color: #FFF
@@ -169,7 +168,17 @@ body
 			&.en,
 			.en
 				font-size: 1.75rem
-	@media screen and (max-width: 414px)
+	.nav-faq
+		li
+			font-size: 1.1em
+			margin-right: 20px
+			line-height: 1.3em
+			&.faq-title
+				font-weight: bold
+				border-right: 1px rgba(255,255,255,0.7) solid
+				margin-right: 10px
+				padding-right: 15px
+	@media screen and (max-width: 768px)
 		position: fixed
 		top: 0
 		left: 0
@@ -179,8 +188,7 @@ body
 		overflow: hidden
 		+transition(0.3s)
 		&.mobile-open
-			height: 240px
-			
+			height: 420px
 		h2
 			display: none
 		.mobile-menu
@@ -195,8 +203,10 @@ body
 			text-shadow: 0 0 0 rgba(0,0,0,.7)
 		ul
 			width: 100%
-			margin-top: 60px
-		li
+			margin-top: 60px	
+		li,
+		.nav-faq li
+			text-align: center
 			margin-right: 0
 			font-size: 1.5rem
 			line-height: 60px
@@ -207,6 +217,10 @@ body
 			text-shadow: 0 0 0 rgba(0,0,0,.7)
 			width: 60%
 			display: block
+		li.faq-title
+			display: none
+
+
 
 	.video-play
 		width: 122px
@@ -249,12 +263,13 @@ body
 		top: 0
 		left: 200px
 		height: 60px
+		width: calc(100% - 285px)
 		h2
 			display: none
 		li
 			line-height: 60px
 			text-align: center	
-			font-size: 1.2em
+			font-size: 1em
 			color: #888
 			padding: 0 15px
 			height: 60px
@@ -266,6 +281,20 @@ body
 			&:hover
 				border-bottom: 3px #0ebacb solid
 				box-sizing: border-box
+		.nav-faq
+			position: absolute
+			top: 0
+			right: 0
+			li	
+				&.faq-title
+					font-weight: bold
+					border-right: 0px rgba(255,255,255,0.7) solid
+					margin-right: 5px
+					padding-right: 0px
+					font-size: 1.1em
+					display: none
+				&.inner-link
+					//display: none
 		.video-play
 			width: 60px
 			height: 35px
@@ -280,12 +309,14 @@ body
 				color: #fff
 			&:before
 				border: 50px #0ebacb solid
+		@media screen and (max-width: 1024px)
+			left: 180px
+			width: calc(100% - 265px)
 		@media screen and (max-width: 768px)
-			left: 150px
-		@media screen and (max-width: 414px)
+			width: 100%
 			left: 0
 			&.mobile-open
-				height: 240px
+				height: 420px
 			ul
 				width: 100%
 				margin-top: 60px
@@ -300,6 +331,9 @@ body
 				text-shadow: 0 0 0 rgba(0,0,0,.7)
 				width: 60%
 				display: block
+			.nav-faq
+				position: relative
+				top: 0px
 
 .main-bg
 	width: 100%
@@ -313,7 +347,7 @@ body
 	background-size: 100% auto
 	background-position: center top
 	background-repeat: no-repeat
-	@media screen and (max-width: 414px)
+	@media screen and (max-width: 768px)
 		background-position: center 50px 
 	&:after
 		position: absolute
@@ -362,7 +396,7 @@ body
 	width: 35%
 	position: absolute
 	top: 10px
-	left: 20px 
+	left: 20px
 	//+transform(translateX(-50%))
 	@media screen and (max-width: 768px)
 		max-width: 80%
@@ -439,7 +473,14 @@ body
 			bottom: 50px
 			width: 85%
 		@media screen and (max-width: 414px)
-			padding-bottom: 80px
+			left: 50%
+			width: 320px
+			margin-left: -160px
+			//max-width: 90%
+			//+transform(translateX(-50%))
+			padding: 10px 0 80px
+			.price
+				padding: 10px 0
 
 		.price
 			margin-top: 1em
@@ -497,17 +538,15 @@ body
 				bottom: 25px
 			@media screen and (max-width: 414px)
 				right: initial
-			@media screen and (max-width: 375px)
-				width: 100%
-				text-align: center
-				a
-					width: 160px
-					height: 54px
-					@media screen and (max-width: 320px)
-						width: 140px
-						height: 47px
-
-		
+			// @media screen and (max-width: 375px)
+			// 	width: 100%
+			// 	text-align: center
+			// 	a
+			// 		width: 160px
+			// 		height: 54px
+			// 		@media screen and (max-width: 320px)
+			// 			width: 140px
+			// 			height: 47px
 	img
 		&.main
 			width: 70%
@@ -556,11 +595,17 @@ body
 				padding-top: 0.5em
 			@media screen and (max-width: 414px)
 				padding: 0.3em 0
+			@media screen and (max-width: 375px)
+				font-size: 1.6em
+			@media screen and (max-width: 320px)
+				font-size: 1.4em
 		h3
 			text-align: center
 			font-size: 1.2em
 			margin: 30px 0 20px
 			font-weight: bold
+			@media screen and (max-width: 414px)
+				margin: -5px 0 20px
 		hr
 			clear: both
 			height: 1px
@@ -659,6 +704,12 @@ body
 			width: 100%
 			max-width: 280px
 			+border-radius(50%)
+		@media screen and (max-width: 414px)
+			width: 90%
+			margin: 0 5% 20px
+			.section-stepImage
+				width: 70%
+		
 		h4
 			font-size: 1.3em
 			line-height: 2.2em
@@ -709,6 +760,16 @@ body
 		@media screen and (max-width: 768px)
 			width: 90%
 			margin: auto
+	@media screen and (max-width: 414px)
+		.logos
+			img
+				width: 28% !important
+		.footer-links
+			text-align: center
+			li
+				width: 90%
+				
+
 
 			
 
@@ -761,3 +822,6 @@ body
 		iframe
 			width: 100%
 			height: 100%
+		@media screen and (max-width: 768px)
+			width: 85%
+			height: 85%

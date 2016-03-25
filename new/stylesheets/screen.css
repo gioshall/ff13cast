@@ -903,6 +903,11 @@ body .scroll-top.solid {
     margin: -5px 0 20px;
   }
 }
+.about .des h5 {
+  text-align: center;
+  font-size: 0.7em;
+  margin-top: -20px;
+}
 .about .des hr {
   clear: both;
   height: 1px;
@@ -991,6 +996,9 @@ body .scroll-top.solid {
   width: 100px;
   height: 100px;
   background-color: #1EB1FC;
+  color: #fff;
+  font-size: 65px;
+  line-height: 100px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1120,7 +1128,7 @@ body .scroll-top.solid {
 }
 .footer small {
   display: block;
-  margin-top: 20px;
+  margin-top: 10px;
   color: #999;
   font-size: 0.5rem;
   line-height: 1rem;
@@ -1135,13 +1143,13 @@ body .scroll-top.solid {
   vertical-align: middle;
 }
 .footer .logos img {
-  width: 120px;
+  width: 160px;
   display: inline-block;
   vertical-align: middle;
   margin: 5px 8px;
 }
 .footer .logos img.ubitus {
-  width: 100px;
+  width: 140px;
 }
 .footer .footer-links {
   display: inline-block;

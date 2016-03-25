@@ -211,7 +211,7 @@ body .scroll-top.solid {
 .header .logo-u.logo-color {
   opacity: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .header {
     background-color: #FFF;
     height: 50px;
@@ -275,7 +275,7 @@ body .scroll-top.solid {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .nav {
     left: 2em;
     bottom: 150px;
@@ -292,7 +292,7 @@ body .scroll-top.solid {
 .nav li {
   display: inline-block;
   margin-right: 30px;
-  font-size: 1.5em;
+  font-size: 1.9em;
   line-height: 2em;
   cursor: pointer;
   letter-spacing: -1px;
@@ -300,12 +300,12 @@ body .scroll-top.solid {
 .nav li.en,
 .nav li .en {
   letter-spacing: 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 .nav li:hover {
   color: #87f3ce;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1500px) {
   .nav li {
     font-size: 1.6em;
     margin-right: 25px;
@@ -313,6 +313,26 @@ body .scroll-top.solid {
   .nav li.en,
   .nav li .en {
     font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .nav li {
+    font-size: 1.3em;
+    margin-right: 25px;
+  }
+  .nav li.en,
+  .nav li .en {
+    font-size: 1.35rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .nav li {
+    font-size: 1.1em;
+    margin-right: 25px;
+  }
+  .nav li.en,
+  .nav li .en {
+    font-size: 1.15rem;
   }
 }
 .nav .nav-faq li {
@@ -326,7 +346,7 @@ body .scroll-top.solid {
   margin-right: 10px;
   padding-right: 15px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .nav {
     position: fixed;
     top: 0;
@@ -487,41 +507,6 @@ body .scroll-top.solid {
 }
 .nav.solid .video-play:before {
   border: 50px #0ebacb solid;
-}
-@media screen and (max-width: 1024px) {
-  .nav.solid {
-    left: 180px;
-    width: calc(100% - 265px);
-  }
-}
-@media screen and (max-width: 768px) {
-  .nav.solid {
-    width: 100%;
-    left: 0;
-  }
-  .nav.solid.mobile-open {
-    height: 420px;
-  }
-  .nav.solid ul {
-    width: 100%;
-    margin-top: 60px;
-  }
-  .nav.solid li {
-    margin-right: 0;
-    font-size: 1.5rem;
-    line-height: 60px;
-    color: #777;
-    padding: 0;
-    height: 60px;
-    margin: 0 auto;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
-    width: 60%;
-    display: block;
-  }
-  .nav.solid .nav-faq {
-    position: relative;
-    top: 0px;
-  }
 }
 
 .main-bg {
@@ -1037,6 +1022,13 @@ body .scroll-top.solid {
     padding-top: 0;
   }
 }
+.about .des .about-cast small,
+.about .des .about-game small,
+.about .des .about-story small {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: #888;
+}
 .about .des .more {
   font-size: 1em;
   color: #00AFFF;
@@ -1090,20 +1082,34 @@ body .scroll-top.solid {
   font-size: 0.8em;
 }
 .about .evn-block li .evn-icon {
-  width: 100px;
-  height: 100px;
-  font-size: 50px;
-  line-height: 100px;
+  width: 150px;
+  height: 150px;
+  font-size: 80px;
+  line-height: 150px;
   background-color: #dadada;
   border: 1px #ccc solid;
   display: block;
-  margin: auto;
+  margin: 15px auto;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
+.about .evn-block li .evn-icon .fa-wifi {
+  line-height: 160px;
+}
+.about .evn-block li .evn-icon .fa-mobile {
+  font-size: 90px;
+  line-height: 155px;
+}
+.about .evn-block li .evn-icon:hover {
+  background-color: #ccc;
+}
 .about .evn-block li h4 {
   display: block;
+  font-size: 1.5em;
+}
+.about .evn-block li a h4 {
+  color: #333;
 }
 
 .footer {
@@ -1114,7 +1120,7 @@ body .scroll-top.solid {
 }
 .footer small {
   display: block;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #999;
   font-size: 0.5rem;
   line-height: 1rem;

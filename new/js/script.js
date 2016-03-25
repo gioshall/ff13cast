@@ -29,15 +29,15 @@ $('.tvcm').click(function(){
 
 // tos faq
 
-$('.inner-link').click(function(){
-    $('body').addClass('blur-bg');
-    $('.tvcm').addClass('show');
-    var innerLink = $(this).attr('outlink');
-    $('.cm-box iframe').attr('src',innerLink);
-});
-$('.tvcm').click(function(){
-    closeBox();
-})
+// $('.inner-link').click(function(){
+//     $('body').addClass('blur-bg');
+//     $('.tvcm').addClass('show');
+//     var innerLink = $(this).attr('outlink');
+//     $('.cm-box iframe').attr('src',innerLink);
+// });
+// $('.tvcm').click(function(){
+//     closeBox();
+// })
 
 // press ESC
 
@@ -53,6 +53,7 @@ $(document).on( "keydown", function( event ) {
 function section1(){$('html,body').animate( { scrollTop: $('.block01').offset().top}, 400)};
 function section2(){$('html,body').animate( { scrollTop: $('.block02').offset().top}, 400)};
 function section3(){$('html,body').animate( { scrollTop: $('.block03').offset().top}, 400)};
+function section4(){$('html,body').animate( { scrollTop: $('.block04').offset().top}, 400)};
 function gotop(){$('html,body').animate( { scrollTop: $('html,body').offset().top}, 100)};
 
 $('.mobile-menu').click(function(){

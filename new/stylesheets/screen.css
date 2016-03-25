@@ -1009,6 +1009,18 @@ body .scroll-top.solid {
   height: 70%;
   margin: 15%;
 }
+.about .des .app-download .cast-icon.cast-btn {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 414px) {
+  .about .des .app-download .cast-icon {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .about .des .app-download .cast-icon.cast-btn {
+    margin: 10px auto 20px;
+  }
+}
 .about .des .app-download h3 {
   vertical-align: middle;
   text-align: left;

@@ -1089,6 +1089,12 @@ body .scroll-top.solid {
   text-align: center;
   font-size: 0.8em;
 }
+@media screen and (max-width: 414px) {
+  .about .evn-block li {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
 .about .evn-block li .evn-icon {
   width: 150px;
   height: 150px;

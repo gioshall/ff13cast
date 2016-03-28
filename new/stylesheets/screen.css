@@ -224,7 +224,7 @@ body .scroll-top.solid {
     margin-right: 50px;
   }
   .header.mobile-open {
-    height: 420px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -263,13 +263,14 @@ body .scroll-top.solid {
 
 .nav {
   position: absolute;
-  bottom: 70px;
+  bottom: 10px;
   left: 3%;
   font-size: 1em;
   line-height: 1em;
   color: #fff;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
   z-index: 10;
+  height: 180px;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -292,7 +293,7 @@ body .scroll-top.solid {
 .nav li {
   display: inline-block;
   margin-right: 30px;
-  font-size: 1.9em;
+  font-size: 2.2em;
   line-height: 2em;
   cursor: pointer;
   letter-spacing: -1px;
@@ -300,39 +301,49 @@ body .scroll-top.solid {
 .nav li.en,
 .nav li .en {
   letter-spacing: 0;
-  font-size: 2rem;
+  font-size: 2.35rem;
 }
 .nav li:hover {
   color: #87f3ce;
 }
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
+  .nav li {
+    font-size: 1.8em;
+    margin-right: 25px;
+  }
+  .nav li.en,
+  .nav li .en {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 1400px) {
   .nav li {
     font-size: 1.6em;
     margin-right: 25px;
   }
   .nav li.en,
   .nav li .en {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 }
 @media screen and (max-width: 1280px) {
   .nav li {
-    font-size: 1.3em;
-    margin-right: 25px;
+    font-size: 1.4em;
+    margin-right: 20px;
   }
   .nav li.en,
   .nav li .en {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 }
 @media screen and (max-width: 1150px) {
   .nav li {
-    font-size: 1.1em;
-    margin-right: 25px;
+    font-size: 1.2em;
+    margin-right: 15px;
   }
   .nav li.en,
   .nav li .en {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 }
 .nav .nav-faq li {
@@ -361,7 +372,7 @@ body .scroll-top.solid {
     transition: 0.3s;
   }
   .nav.mobile-open {
-    height: 420px;
+    height: 300px;
   }
   .nav h2 {
     display: none;
@@ -399,55 +410,6 @@ body .scroll-top.solid {
     display: none;
   }
 }
-.nav .video-play {
-  width: 122px;
-  height: 65px;
-  line-height: 65px;
-  text-align: center;
-  background-image: url("../img/video-thumb.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  position: relative;
-  margin: auto;
-  font-size: 2em;
-  color: #fff;
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-.nav .video-play:before {
-  background-image: url("../img/video-mask.gif");
-  background-repeat: no-repeat;
-  background-repeat: repeat;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border: 5px #fff solid;
-  box-sizing: border-box;
-  content: "";
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-.nav .video-play i {
-  position: relative;
-  z-index: 2;
-}
-.nav .video-play:hover {
-  color: #87f3ce;
-}
-.nav .video-play:hover:before {
-  border: 3px #87f3ce solid;
-  background: transparent;
-}
 .nav.solid {
   position: fixed;
   top: 0;
@@ -470,7 +432,7 @@ body .scroll-top.solid {
 }
 .nav.solid li.en,
 .nav.solid li .en {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 .nav.solid li:hover {
   border-bottom: 3px #0ebacb solid;
@@ -489,24 +451,34 @@ body .scroll-top.solid {
   font-size: 1.1em;
   display: none;
 }
-.nav.solid .video-play {
-  width: 60px;
-  height: 35px;
-  overflow: hidden;
-  box-shadow: 0 0 0 #fff;
-  text-shadow: 0 0 0 #fff;
-  line-height: 35px;
-  font-size: 15px;
-  margin-left: 20px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-}
-.nav.solid .video-play:hover {
-  color: #fff;
-}
-.nav.solid .video-play:before {
-  border: 50px #0ebacb solid;
+@media screen and (max-width: 1024px) {
+  .nav.solid {
+    width: 100%;
+    left: 0;
+  }
+  .nav.solid.mobile-open {
+    height: 300px;
+  }
+  .nav.solid ul {
+    width: 100%;
+    margin-top: 60px;
+  }
+  .nav.solid li {
+    margin-right: 0;
+    font-size: 1.5rem;
+    line-height: 60px;
+    color: #777;
+    padding: 0;
+    height: 60px;
+    margin: 0 auto;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+    width: 60%;
+    display: block;
+  }
+  .nav.solid .nav-faq {
+    position: relative;
+    top: 0px;
+  }
 }
 
 .main-bg {
@@ -523,7 +495,7 @@ body .scroll-top.solid {
   background-position: center top;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .main-bg {
     background-position: center 50px;
   }
@@ -710,12 +682,13 @@ body .scroll-top.solid {
   right: 2em;
   padding: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .container .text {
-    left: 2em;
+    left: 50%;
     right: initial;
-    bottom: 50px;
-    width: 85%;
+    margin: 0 -165px;
+    bottom: 70px;
+    width: 370px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -894,7 +867,7 @@ body .scroll-top.solid {
 }
 .about .des h3 {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin: 30px 0 20px;
   font-weight: bold;
 }
@@ -921,7 +894,7 @@ body .scroll-top.solid {
 .about .des .dot {
   list-style-type: disc;
   position: absolute;
-  color: #999;
+  color: #00AFFF;
   font-size: 15px;
   left: 50%;
   margin-top: -105px;
@@ -957,6 +930,23 @@ body .scroll-top.solid {
   padding: 0px 0 100px;
   width: 65%;
   margin: auto;
+}
+.about .des .app-download:nth-of-type(3) {
+  padding-bottom: 30px;
+}
+.about .des .app-download .store a {
+  width: 180px;
+  height: 60px;
+  display: inline-block;
+  background-size: 100%;
+}
+.about .des .app-download .store a.apple {
+  background-image: url("../img/icon_appstore.png");
+  background-repeat: no-repeat;
+}
+.about .des .app-download .store a.android {
+  background-image: url("../img/icon_googleplay.png");
+  background-repeat: no-repeat;
 }
 .about .des .app-download .app-icon {
   position: relative;
@@ -1021,12 +1011,22 @@ body .scroll-top.solid {
     margin: 10px auto 20px;
   }
 }
-.about .des .app-download h3 {
+.about .des .app-download h4 {
   vertical-align: middle;
-  text-align: left;
+  text-align: justify;
   font-size: 1.2em;
   line-height: 2em;
   font-weight: normal;
+  margin: 10px auto;
+  width: 550px;
+}
+@media screen and (max-width: 1024px) {
+  .about .des .app-download img {
+    max-width: 100%;
+  }
+  .about .des .app-download h4 {
+    width: auto;
+  }
 }
 .about .des .about-cast,
 .about .des .about-game,
@@ -1095,7 +1095,7 @@ body .scroll-top.solid {
 .about .evn-block li {
   display: inline-block;
   vertical-align: top;
-  width: 29%;
+  width: 28%;
   font-size: 0;
   margin: 0 2%;
   text-align: center;
@@ -1207,83 +1207,5 @@ body .scroll-top.solid {
   }
   .footer .footer-links li {
     width: 90%;
-  }
-}
-
-.tvcm {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.tvcm.show {
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-.tvcm .close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  cursor: pointer;
-}
-.tvcm .close:before, .tvcm .close:after {
-  width: 2px;
-  height: 40px;
-  content: "";
-  background-color: #FFF;
-  position: absolute;
-  top: 0;
-}
-.tvcm .close:before {
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.tvcm .close:after {
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.tvcm .cm-box {
-  position: absolute;
-  width: 800px;
-  height: 450px;
-  background-color: #000;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  border: 2px #fff solid;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 3px 25px rgba(0, 0, 0, 0.6);
-}
-.tvcm .cm-box iframe {
-  width: 100%;
-  height: 100%;
-}
-@media screen and (max-width: 768px) {
-  .tvcm .cm-box {
-    width: 85%;
-    height: 85%;
   }
 }

@@ -86,22 +86,14 @@ $( window ).resize(function() {
 
 // share
 
+var url = window.location;
 function tweet() {
-    myWindow = window.open("https://twitter.com/share?url=https%3A%2F%2Fdev.twitter.com%2Fweb%2Ftweet-button&related=twitterapi%2Ctwitter&hashtags=ファイナルファンタジー®XIII%2Cchromecast&text=ファイナルファンタジー®XIII%20Google%20Cast%20Edition", "Tweet", "width=500, height=400");
+    myWindow = window.open('https://twitter.com/share?url=' + url + '&related=twitterapi%2Ctwitter&hashtags=ファイナルファンタジー®XIII%2Cchromecast&text=ファイナルファンタジー®XIII%20Google%20Cast%20Edition', 'Tweet', 'width=500, height=400');
 }
-
-// function fbShare() {
-//     myWindow = window.open("https://www.facebook.com/sharer/sharer.php?u=' + window.location", "facebook share", "width=500, height=400");
-// }
-
 $('.share .fa-twitter').click(function(){
 	tweet()
 });
-
-var url = window.location;
 $('.share .share-fb').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + url)
 
-
-//console.log(url)
 
 

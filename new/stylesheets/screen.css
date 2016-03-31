@@ -294,7 +294,7 @@ body .scroll-top.solid {
 .nav li {
   display: inline-block;
   margin-right: 30px;
-  font-size: 2.2em;
+  font-size: 2.4em;
   line-height: 2em;
   cursor: pointer;
   letter-spacing: -1px;
@@ -302,10 +302,19 @@ body .scroll-top.solid {
 .nav li.en,
 .nav li .en {
   letter-spacing: 0;
-  font-size: 2.35rem;
+  font-size: 2.55rem;
 }
 .nav li:hover {
   color: #87f3ce;
+}
+@media screen and (max-width: 1800px) {
+  .nav li {
+    font-size: 2.2em;
+  }
+  .nav li.en,
+  .nav li .en {
+    font-size: 2.35rem;
+  }
 }
 @media screen and (max-width: 1600px) {
   .nav li {
@@ -347,17 +356,6 @@ body .scroll-top.solid {
     font-size: 1.25rem;
   }
 }
-.nav .nav-faq li {
-  font-size: 1.1em;
-  margin-right: 20px;
-  line-height: 1.3em;
-}
-.nav .nav-faq li.faq-title {
-  font-weight: bold;
-  border-right: 1px rgba(255, 255, 255, 0.7) solid;
-  margin-right: 10px;
-  padding-right: 15px;
-}
 @media screen and (max-width: 1024px) {
   .nav {
     position: fixed;
@@ -393,8 +391,7 @@ body .scroll-top.solid {
     width: 100%;
     margin-top: 60px;
   }
-  .nav li,
-  .nav .nav-faq li {
+  .nav li {
     text-align: center;
     margin-right: 0;
     font-size: 1.5rem;
@@ -406,9 +403,6 @@ body .scroll-top.solid {
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
     width: 60%;
     display: block;
-  }
-  .nav li.faq-title {
-    display: none;
   }
 }
 .nav.solid {
@@ -439,19 +433,6 @@ body .scroll-top.solid {
   border-bottom: 3px #0ebacb solid;
   box-sizing: border-box;
 }
-.nav.solid .nav-faq {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.nav.solid .nav-faq li.faq-title {
-  font-weight: bold;
-  border-right: 0px rgba(255, 255, 255, 0.7) solid;
-  margin-right: 5px;
-  padding-right: 0px;
-  font-size: 1.1em;
-  display: none;
-}
 @media screen and (max-width: 1024px) {
   .nav.solid {
     width: 100%;
@@ -475,10 +456,6 @@ body .scroll-top.solid {
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
     width: 60%;
     display: block;
-  }
-  .nav.solid .nav-faq {
-    position: relative;
-    top: 0px;
   }
 }
 
@@ -642,13 +619,38 @@ body .scroll-top.solid {
   right: 2em;
   padding: 10px;
 }
+.container .text .app-icon {
+  position: relative;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+  margin: 0 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.container .text .app-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 @media screen and (max-width: 1024px) {
   .container .text {
     left: 50%;
     right: initial;
-    margin: 0 -165px;
+    margin: 0 -265px;
     bottom: 70px;
-    width: 370px;
+    width: 550px;
+  }
+  .container .text .app-icon,
+  .container .text .price {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .text .app-icon {
+    width: 125px;
+    height: 125px;
   }
 }
 @media screen and (max-width: 414px) {
@@ -656,10 +658,19 @@ body .scroll-top.solid {
     left: 50%;
     width: 320px;
     margin-left: -160px;
-    padding: 10px 0 80px;
+    padding: 10px 0 20px;
+  }
+  .container .text .app-icon {
+    display: none;
   }
   .container .text .price {
     padding: 10px 0;
+  }
+  .container .text .store {
+    font-size: 0;
+  }
+  .container .text .store a {
+    margin: 5px 0;
   }
 }
 .container .text .price {
@@ -739,13 +750,6 @@ body .scroll-top.solid {
 .container .text .store a.android {
   background-image: url("../img/icon_googleplay.png");
   background-repeat: no-repeat;
-}
-@media screen and (max-width: 768px) {
-  .container .text .store {
-    position: absolute;
-    right: 0;
-    bottom: 25px;
-  }
 }
 @media screen and (max-width: 414px) {
   .container .text .store {

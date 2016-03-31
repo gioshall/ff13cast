@@ -148,7 +148,7 @@ body
 	li
 		display: inline-block
 		margin-right: 30px
-		font-size: 2.2em
+		font-size: 2.4em
 		line-height: 2em
 		cursor: pointer
 		//font-weight: 600
@@ -156,10 +156,15 @@ body
 		&.en,
 		.en
 			letter-spacing: 0
-			font-size: 2.35rem
+			font-size: 2.55rem
 		//+transition(0.2s)
 		&:hover
 			color: #87f3ce
+		@media screen and (max-width: 1800px)
+			font-size: 2.2em
+			&.en,
+			.en
+				font-size: 2.35rem
 
 		@media screen and (max-width: 1600px)
 			font-size: 1.8em
@@ -185,16 +190,16 @@ body
 			&.en,
 			.en
 				font-size: 1.25rem
-	.nav-faq
-		li
-			font-size: 1.1em
-			margin-right: 20px
-			line-height: 1.3em
-			&.faq-title
-				font-weight: bold
-				border-right: 1px rgba(255,255,255,0.7) solid
-				margin-right: 10px
-				padding-right: 15px
+	// .nav-faq
+	// 	li
+	// 		font-size: 1.1em
+	// 		margin-right: 20px
+	// 		line-height: 1.3em
+	// 		&.faq-title
+	// 			font-weight: bold
+	// 			border-right: 1px rgba(255,255,255,0.7) solid
+	// 			margin-right: 10px
+	// 			padding-right: 15px
 	@media screen and (max-width: 1024px)
 		position: fixed
 		top: 0
@@ -221,8 +226,7 @@ body
 		ul
 			width: 100%
 			margin-top: 60px	
-		li,
-		.nav-faq li
+		li
 			text-align: center
 			margin-right: 0
 			font-size: 1.5rem
@@ -234,8 +238,8 @@ body
 			text-shadow: 0 0 0 rgba(0,0,0,.7)
 			width: 60%
 			display: block
-		li.faq-title
-			display: none
+		// li.faq-title
+		// 	display: none
 
 	// .video-play
 	// 	width: 122px
@@ -296,19 +300,19 @@ body
 			&:hover
 				border-bottom: 3px #0ebacb solid
 				box-sizing: border-box
-		.nav-faq
-			position: absolute
-			top: 0
-			right: 0
-			li	
-				&.faq-title
-					font-weight: bold
-					border-right: 0px rgba(255,255,255,0.7) solid
-					margin-right: 5px
-					padding-right: 0px
-					font-size: 1.1em
-					display: none
-				&.inner-link
+		// .nav-faq
+		// 	position: absolute
+		// 	top: 0
+		// 	right: 0
+		// 	li	
+		// 		&.faq-title
+		// 			font-weight: bold
+		// 			border-right: 0px rgba(255,255,255,0.7) solid
+		// 			margin-right: 5px
+		// 			padding-right: 0px
+		// 			font-size: 1.1em
+		// 			display: none
+		// 		&.inner-link
 					//display: none
 		// .video-play
 		// 	width: 60px
@@ -343,9 +347,9 @@ body
 				text-shadow: 0 0 0 rgba(0,0,0,.7)
 				width: 60%
 				display: block
-			.nav-faq
-				position: relative
-				top: 0px
+			// .nav-faq
+			// 	position: relative
+			// 	top: 0px
 
 .main-bg
 	width: 100%
@@ -478,22 +482,46 @@ body
 		bottom: 10px
 		right: 2em
 		padding: 10px		
-		
+		.app-icon
+			position: relative
+			overflow: hidden
+			width: 140px
+			height: 140px
+			margin: 0 10px
+			box-shadow: 0 2px 8px rgba(0,0,0,0.6)
+			+border-radius(4px)
+			img
+				display: block
+				width: 100%
+				height: 100%
 		@media screen and (max-width: 1024px)
 			left: 50%
 			right: initial
-			margin: 0 -165px
+			margin: 0 -265px
 			bottom: 70px
-			width: 370px
+			width: 550px
+			.app-icon,
+			.price
+				display: inline-block
+				vertical-align: middle
+			.app-icon
+				width: 125px
+				height: 125px
 		@media screen and (max-width: 414px)
 			left: 50%
 			width: 320px
 			margin-left: -160px
 			//max-width: 90%
 			//+transform(translateX(-50%))
-			padding: 10px 0 80px
+			padding: 10px 0 20px
+			.app-icon
+				display: none
 			.price
 				padding: 10px 0
+			.store
+				font-size: 0
+				a
+					margin: 5px 0
 
 		.price
 			margin-top: 1em
@@ -545,10 +573,10 @@ body
 					+bg(icon_appstore,png)
 				&.android
 					+bg(icon_googleplay,png)
-			@media screen and (max-width: 768px)
-				position: absolute
-				right: 0
-				bottom: 25px
+			// @media screen and (max-width: 768px)
+			// 	position: absolute
+			// 	right: 0
+			// 	bottom: 25px
 			@media screen and (max-width: 414px)
 				right: initial
 			// @media screen and (max-width: 375px)
